@@ -1,0 +1,62 @@
+:root{
+  --bg:#0f1226;
+  --card:#161a36;
+  --text:#e9eaf4;
+  --muted:#aab0d6;
+  --grid:#1e2348;
+  --accent:#6c7cff;
+}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;height:100%}
+body{
+  background: radial-gradient(1200px 600px at 70% -10%, #233 0%, transparent 60%), var(--bg);
+  color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+main{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.header{
+  padding:24px 20px 8px;
+}
+.h1{font-size:24px; font-weight:800; letter-spacing:0.3px}
+.sub{color:var(--muted); margin-top:8px; max-width:900px}
+.container{
+  flex:1;
+  display:flex;
+  gap:16px;
+  padding:16px;
+}
+.panel{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  border:1px solid #2a3064;
+  border-radius:14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.sidebar{
+  width:320px;
+  padding:16px;
+}
+.canvas{
+  flex:1;
+  padding:0;
+  position:relative;
+  overflow:auto;
+}
+.legendTitle{font-size:12px; text-transform:uppercase; letter-spacing:1px; color:#c6caf0; margin-bottom:10px}
+.legendGrid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px}
+.legendBtn{display:flex; align-items:center; gap:10px; padding:10px; border-radius:10px; background:#101438; border:1px solid #2a3064; cursor:pointer}
+.legendDot{width:14px; height:14px; border-radius:50%}
+.legendLabel{font-size:13px}
+.footer{padding:10px 16px; color:#99a0d8; font-size:12px}
+
+/* SVG helpers */
+svg{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)), repeating-linear-gradient(0deg, var(--grid), var(--grid) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, var(--grid), var(--grid) 1px, transparent 1px, transparent 40px)}
+.node{filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35))}
+.node rect{rx:10; ry:10;}
+.node text{font-size:12px; fill:white}
+.groupTitle{font-size:12px; fill:#cfd3ff; text-transform:uppercase; letter-spacing:1px}
+.link{stroke-width:2}
+.badge{font-size:10px; fill:#0a0c1e}
